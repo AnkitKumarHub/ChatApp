@@ -1,0 +1,65 @@
+/* Hide scrollbar while allowing scrolling */
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.custom-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Message animations */
+@keyframes messageAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-appear {
+  animation: messageAppear 0.3s ease-out;
+}
+
+/* Chat welcome screen */
+.chat-welcome {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.chat-welcome img {
+  width: 80px;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.chat-welcome img:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.chat-welcome p {
+  color: #94a3b8;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  .chat-welcome img {
+    width: 60px;
+  }
+  .chat-welcome p {
+    font-size: 1.125rem;
+  }
+}
