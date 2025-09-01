@@ -2,7 +2,7 @@ const CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
 const UPLOAD_PRESET =import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;
 
 if (!CLOUD_NAME || !UPLOAD_PRESET) {
-  throw new Error('Cloudinary configuration is missing. Please set REACT_APP_CLOUDINARY_CLOUD_NAME and REACT_APP_CLOUDINARY_UPLOAD_PRESET in your .env file');
+  throw new Error('Cloudinary configuration is missing.');
 }
 
 export async function uploadToCloudinary(file) {
