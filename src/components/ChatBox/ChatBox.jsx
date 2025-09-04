@@ -383,7 +383,7 @@ const ChatBox = ({ chat, messages: propMessages, messagesId }) => {
   }, [messagesId, chat?.userData?.id]);
 
   useEffect(() => {
-    console.log('Setting up message listener with messagesId:', messagesId);
+    // console.log('Setting up message listener with messagesId:', messagesId);
     if (messagesId && chat?.userData?.id) {
       // First verify if the current user is a participant
       const messagesDocRef = doc(db, "messages", messagesId);

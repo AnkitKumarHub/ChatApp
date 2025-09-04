@@ -100,6 +100,7 @@ export async function sendFriendRequest({ sender, recipientId }) {
     from: sender.uid,
     fromName: sender.name,
     timestamp: Date.now(),
+    senderAvatar: sender.avatar || null,
   };
 
   await updateDoc(recipientRef, {

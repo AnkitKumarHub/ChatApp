@@ -136,12 +136,12 @@ const NotificationDropdown = ({ notifications, onClose, userData }) => {
               <div className="flex items-start gap-3">
                 {/* Avatar */}
                 <Avatar
-                  src={notification.senderAvatar || notification.senderPhoto || notification.avatar}
+                  src={notification.senderAvatar}
                   alt={notification.fromName}
                   className="w-12 h-12 ring-2 ring-cyan-400/30"
                   imgProps={{
                     onError: (e) => {
-                      e.target.src = '/default-avatar.png';
+                      e.target.src = '/public/default-avatar.png';
                     },
                   }}
                 />
